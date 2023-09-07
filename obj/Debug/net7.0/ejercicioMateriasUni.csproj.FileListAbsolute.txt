@@ -1,0 +1,14 @@
+C:\Users\M02-037\Documents\aprenCSharp\ejercicioMateriasUni\bin\Debug\net7.0\ejercicioMateriasUni.exe
+C:\Users\M02-037\Documents\aprenCSharp\ejercicioMateriasUni\bin\Debug\net7.0\ejercicioMateriasUni.deps.json
+C:\Users\M02-037\Documents\aprenCSharp\ejercicioMateriasUni\bin\Debug\net7.0\ejercicioMateriasUni.runtimeconfig.json
+C:\Users\M02-037\Documents\aprenCSharp\ejercicioMateriasUni\bin\Debug\net7.0\ejercicioMateriasUni.dll
+C:\Users\M02-037\Documents\aprenCSharp\ejercicioMateriasUni\bin\Debug\net7.0\ejercicioMateriasUni.pdb
+C:\Users\M02-037\Documents\aprenCSharp\ejercicioMateriasUni\obj\Debug\net7.0\ejercicioMateriasUni.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\M02-037\Documents\aprenCSharp\ejercicioMateriasUni\obj\Debug\net7.0\ejercicioMateriasUni.AssemblyInfoInputs.cache
+C:\Users\M02-037\Documents\aprenCSharp\ejercicioMateriasUni\obj\Debug\net7.0\ejercicioMateriasUni.AssemblyInfo.cs
+C:\Users\M02-037\Documents\aprenCSharp\ejercicioMateriasUni\obj\Debug\net7.0\ejercicioMateriasUni.csproj.CoreCompileInputs.cache
+C:\Users\M02-037\Documents\aprenCSharp\ejercicioMateriasUni\obj\Debug\net7.0\ejercicioMateriasUni.dll
+C:\Users\M02-037\Documents\aprenCSharp\ejercicioMateriasUni\obj\Debug\net7.0\refint\ejercicioMateriasUni.dll
+C:\Users\M02-037\Documents\aprenCSharp\ejercicioMateriasUni\obj\Debug\net7.0\ejercicioMateriasUni.pdb
+C:\Users\M02-037\Documents\aprenCSharp\ejercicioMateriasUni\obj\Debug\net7.0\ejercicioMateriasUni.genruntimeconfig.cache
+C:\Users\M02-037\Documents\aprenCSharp\ejercicioMateriasUni\obj\Debug\net7.0\ref\ejercicioMateriasUni.dll

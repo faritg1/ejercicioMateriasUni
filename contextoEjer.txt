@@ -1,0 +1,21 @@
+El profesor del area de matematicas necesita generar un programa de los estudiantes que se encuentran matriculados la informacion que el docente posee de cada estudiante es la siguiente: 
+
+- codigo longitud mx 15caracteres, 
+- nombre de estudiante long max 40carac, 
+- correo electronico con la longitud max de 40carc, 
+- edad del estudiante, 
+- direccion long max de 35carac. 
+
+No se conoce la cantidad que se registaron en la asinatura. 
+La universidad tiene como norma que cada estudiante debe presentar:
+- 4 quices 
+- 2 trabajos 
+- 3 parcilaes.
+
+las notas equivalen 
+- quices equivale 25% 
+- trabajos equivale al 15% 
+- los parciales equivale 60%, 
+
+el programa debe permitirle al profesor generar los siguientes reportes. 
+El programa debe permitirle al docente resgistrar notas.
