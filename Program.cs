@@ -5,7 +5,6 @@ internal class Program
     private static void Main(string[] args)
     {
         List<Estudiante> arrayEstud = new List<Estudiante>();
-        Estudiante estudiante = new Estudiante();
         int op = 0;
         try{
             do{
@@ -22,7 +21,7 @@ internal class Program
                         Console.WriteLine("Gracias por usar este programa");
                         break;
                     case 1:
-                        registrarEstudiante(arrayEstud,estudiante);
+                        registrarEstudiante(arrayEstud);
                         break;
                     case 2:
                         break;
@@ -39,12 +38,13 @@ internal class Program
             Console.WriteLine("ALGO HIZO MAL!!! {0}",ex.Message.ToString());
         }
     } 
-    public static void registrarEstudiante(List<Estudiante> arrayEstud, Estudiante estudiante){
+    public static void registrarEstudiante(List<Estudiante> arrayEstud){
         try{
             int n = 0;
             Console.WriteLine("Cuantos estudiantes desea Registrar: ");
             n = int.Parse(Console.ReadLine());
             for (int i = 0; i < n; i++){
+                Estudiante estudiante = new Estudiante();
                 Console.WriteLine("Codigo del estudiante {0}",i+1);
                 estudiante.Codigo = Console.ReadLine();
 
