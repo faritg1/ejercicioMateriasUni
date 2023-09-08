@@ -8,11 +8,13 @@ internal class Program
         int op = 0;
         try{
             do{
+                Console.ResetColor();
                 Console.WriteLine("-----------------------------PROGRAMA UNIVERSIDAD-----------------------------");
                 Console.WriteLine("1. Registrar Estudiante/s");
                 Console.WriteLine("2. Registrar Notas");
                 Console.WriteLine("3. Mostrar Todos los Estudiantes");
                 Console.WriteLine("0. Salir");
+                Console.WriteLine("-------------------------------------------------------------------------------");
                 op = int.Parse(Console.ReadLine());
 
                 switch (op)
@@ -24,6 +26,17 @@ internal class Program
                         registrarEstudiante(arrayEstud);
                         break;
                     case 2:
+                        string id;
+                        Console.WriteLine("Ingrese el codigo del estudiante");
+                        id = Console.ReadLine();
+                        foreach (Estudiante item in arrayEstud){
+                            if (item.Codigo == id){
+                                Console.WriteLine("ESTUDIANTE ENCONTRADO");
+                                Console.WriteLine("Nombre {0}",item.Nombre);
+                            }else{
+                                Console.WriteLine("Estudiante no encontrado");
+                            }
+                        }
                         break;
                     case 3:
                         mostrarEstudiante(arrayEstud);
