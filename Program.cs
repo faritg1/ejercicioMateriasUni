@@ -21,9 +21,8 @@ internal class Program
                 switch (op)
                 {
                     case 0:
-                        Console.WriteLine("Gracias por usar este programa");
-                        Thread.Sleep(1000);
                         Console.Clear();
+                        Console.WriteLine("Gracias por usar este programa");
                         break;
                     case 1:
                         Console.Clear();
@@ -100,15 +99,11 @@ internal class Program
                         id = Console.ReadLine();
                         foreach (NotasEstudiante item in arrayNot){
                             if (item.CodEstudiante == id){
-                                if(item.Quiz.Count < 4){
-                                    Console.WriteLine("Ingrese la nota del quiz {0}",item.Quiz.Count+1);
-                                    item.Quiz.Add(int.Parse(Console.ReadLine()));
-                                    arrayNot.Add(item);
-                                    break;
-                                }else{
-                                    Console.WriteLine("Los campos de los quices ya estan llenos");
-                                    break;
-                                }
+                                do
+                                {
+                                agregandoQuiz(item);                                    
+                                Console.WriteLine("¿Desea Agregar nota de otro Quiz? si(Y) no(N)");
+                                } while (Console.ReadLine().ToUpper() == "Y");
                             }else{
                                 Console.WriteLine("Estudiante no encontrado");
                             }
@@ -122,7 +117,6 @@ internal class Program
                                     if(item.Trabajo.Count < 4){
                                         Console.WriteLine("Ingrese la nota del Trabajo {0}",item.Trabajo.Count+1);
                                         item.Trabajo.Add(int.Parse(Console.ReadLine()));
-                                        arrayNot.Add(item);
                                         break;
                                     }else{
                                         Console.WriteLine("Los campos de los Trabajo ya estan llenos");
@@ -164,6 +158,15 @@ internal class Program
         }  */
     }
 
+    public static void agregandoQuiz(NotasEstudiante notasQ){
+        if(notasQ.Quiz.Count < 4){
+            Console.WriteLine("Ingrese la nota del quiz {0}",notasQ.Quiz.Count+1);
+            notasQ.Quiz.Add(Convert.ToInt32(Console.ReadLine()));
+        }else{
+            Console.WriteLine("Los campos de los quices ya estan llenos");
+        }
+    }
+
     public static void mostrarEstudiante(List<Estudiante> arrayEstud,List<NotasEstudiante> arrayNot){
         Console.Clear();
         Console.ForegroundColor = ConsoleColor.Red;
@@ -175,7 +178,11 @@ internal class Program
         Console.WriteLine("------------------------------------------------------------------------------------------------------------------------------------");
         Console.WriteLine("| {0,-20} | {1,-20} | {2,-20} | {3,-20} |", "CODIGO", "QUIZ", "TRABAJO", "PARCIAL");
         foreach (NotasEstudiante item in arrayNot){
-            Console.WriteLine("| {0,-20} | {1,-20} | {2,-20} | {3,-20} |", item.CodEstudiante, item.Quiz, item.Trabajo, item.Parcial);
+            foreach (int notQ in item.Quiz)
+            {
+                Console.WriteLine("| {0,-20} | {1,-20}", item.CodEstudiante, item.Quiz);
+            }
+            
         }
     }
 }
