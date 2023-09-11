@@ -52,6 +52,7 @@ internal class Program
             for (int i = 0; i < n; i++){
                 Estudiante estudiante = new Estudiante();
                 NotasEstudiante nota = new NotasEstudiante();
+                
                 Console.WriteLine("Codigo del estudiante {0}",i+1);
                 estudiante.Codigo = Console.ReadLine().ToLower();
                 nota.CodEstudiante = estudiante.Codigo;
@@ -68,8 +69,12 @@ internal class Program
                 Console.WriteLine("Direccion del estudiante {0}",i+1);
                 estudiante.Direccion = Console.ReadLine();
 
-                arrayEstud.Add(estudiante);
-                arrayNot.Add(nota);
+                if((estudiante.Codigo.Length >= 0 && estudiante.Codigo.Length <=15) && (estudiante.Nombre.Length >=0 && estudiante.Nombre.Length <= 40) && (estudiante.Email.Length >=0 && estudiante.Email.Length <=40) && (estudiante.Direccion.Length>=0 && estudiante.Direccion.Length <= 40)){
+                    arrayEstud.Add(estudiante);
+                    arrayNot.Add(nota);
+                }else{
+                    Console.WriteLine("hay un error al registrar los datos del estudiante");
+                }
             }
         /* }catch (Exception ex){
             Console.WriteLine("ALGO HIZO MAL!!! {0}",ex.Message.ToString());
@@ -101,8 +106,8 @@ internal class Program
                             if (item.CodEstudiante == id){
                                 do
                                 {
-                                agregandoQuiz(item);                                    
-                                Console.WriteLine("¿Desea Agregar nota de otro Quiz? si(Y) no(N)");
+                                    agregandoQuiz(item);                                    
+                                    Console.WriteLine("¿Desea Agregar nota de otro Quiz? si(Y) no(N)");
                                 } while (Console.ReadLine().ToUpper() == "Y");
                             }else{
                                 Console.WriteLine("Estudiante no encontrado");
@@ -114,14 +119,11 @@ internal class Program
                             id = Console.ReadLine();
                             foreach (NotasEstudiante item in arrayNot){
                                 if (item.CodEstudiante == id){
-                                    if(item.Trabajo.Count < 4){
-                                        Console.WriteLine("Ingrese la nota del Trabajo {0}",item.Trabajo.Count+1);
-                                        item.Trabajo.Add(int.Parse(Console.ReadLine()));
-                                        break;
-                                    }else{
-                                        Console.WriteLine("Los campos de los Trabajo ya estan llenos");
-                                        break;
-                                    }
+                                    do
+                                    {
+                                        agregandoTrabajo(item);                                    
+                                        Console.WriteLine("¿Desea Agregar nota de otro Trabajo? si(Y) no(N)");
+                                    } while (Console.ReadLine().ToUpper() == "Y");
                                 }else{
                                     Console.WriteLine("Estudiante no encontrado");
                                 }
@@ -132,15 +134,11 @@ internal class Program
                             id = Console.ReadLine();
                             foreach (NotasEstudiante item in arrayNot){
                                 if (item.CodEstudiante == id){
-                                    if(item.Parcial.Count < 4){
-                                        Console.WriteLine("Ingrese la nota del parcial {0}",item.Parcial.Count+1);
-                                        item.Parcial.Add(int.Parse(Console.ReadLine()));
-                                        arrayNot.Add(item);
-                                        break;
-                                    }else{
-                                        Console.WriteLine("Los campos de los Parciales ya estan llenos");
-                                        break;
-                                    }
+                                    do
+                                    {
+                                        agregandoParcial(item);                                    
+                                        Console.WriteLine("¿Desea Agregar nota de otro Trabajo? si(Y) no(N)");
+                                    } while (Console.ReadLine().ToUpper() == "Y");
                                 }else{
                                     Console.WriteLine("Estudiante no encontrado");
                                 }
@@ -150,7 +148,6 @@ internal class Program
                         Console.WriteLine("EY!!! TE SALISTE DEL RANGO");
                         break;
                 }
-
             }while(op != 0);
 
         /* }catch (Exception ex){
@@ -166,6 +163,25 @@ internal class Program
             Console.WriteLine("Los campos de los quices ya estan llenos");
         }
     }
+
+    public static void agregandoTrabajo(NotasEstudiante notasT){
+        if(notasT.Trabajo.Count < 2){
+            Console.WriteLine("Ingrese la nota del trabajo {0}",notasT.Trabajo.Count+1);
+            notasT.Trabajo.Add(Convert.ToInt32(Console.ReadLine()));
+        }else{
+            Console.WriteLine("Los campos de los trabajos ya estan llenos");
+        }
+    }
+
+    public static void agregandoParcial(NotasEstudiante notasP){
+        if(notasP.Parcial.Count < 3){
+            Console.WriteLine("Ingrese la nota del parcial {0}",notasP.Parcial.Count+1);
+            notasP.Parcial.Add(Convert.ToInt32(Console.ReadLine()));
+        }else{
+            Console.WriteLine("Los campos de los parciales ya estan llenos");
+        }
+    }
+
 
     public static void mostrarEstudiante(List<Estudiante> arrayEstud,List<NotasEstudiante> arrayNot){
         Console.Clear();
