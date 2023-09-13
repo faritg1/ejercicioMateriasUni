@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj": {}
+    "C:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj": {}
   },
   "projects": {
-    "c:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj": {
+    "C:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj",
+        "projectUniqueName": "C:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj",
         "projectName": "ejercicioMateriasUni",
-        "projectPath": "c:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj",
+        "projectPath": "C:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj",
         "packagesPath": "C:\\Users\\M02-037\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\obj\\",
+        "outputPath": "C:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\M02-037\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y9ZmB2nfwGr4WU2jfcvqW+v49zBbxAg8GIWHzTe65G63spzzsO8Qr/CoYTAt8QPWyldqKOEK3hx4xr6z3rSFSg==",
+  "dgSpecHash": "FmF6X6hVThqcagbKkQy7OLAJQUEpTXdawnlGd0/rasL8kXVytj8cMlfpUCaISW+hR6M0pNQo2az35ewBYJS5CA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj",
+  "projectFilePath": "C:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\M02-037\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
