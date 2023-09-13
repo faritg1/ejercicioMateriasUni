@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/carlosfarit/Documentos/programacion/aprendiendoCsharp/ejercicioMateriasUni/ejercicioMateriasUni.csproj": {}
+    "c:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj": {}
   },
   "projects": {
-    "/home/carlosfarit/Documentos/programacion/aprendiendoCsharp/ejercicioMateriasUni/ejercicioMateriasUni.csproj": {
+    "c:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/carlosfarit/Documentos/programacion/aprendiendoCsharp/ejercicioMateriasUni/ejercicioMateriasUni.csproj",
+        "projectUniqueName": "c:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj",
         "projectName": "ejercicioMateriasUni",
-        "projectPath": "/home/carlosfarit/Documentos/programacion/aprendiendoCsharp/ejercicioMateriasUni/ejercicioMateriasUni.csproj",
-        "packagesPath": "/home/carlosfarit/.nuget/packages/",
-        "outputPath": "/home/carlosfarit/Documentos/programacion/aprendiendoCsharp/ejercicioMateriasUni/obj/",
+        "projectPath": "c:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj",
+        "packagesPath": "C:\\Users\\M02-037\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/carlosfarit/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\M02-037\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -53,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

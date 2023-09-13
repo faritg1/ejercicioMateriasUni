@@ -19,3 +19,5 @@ las notas equivalen
 
 el programa debe permitirle al profesor generar los siguientes reportes. 
 El programa debe permitirle al docente resgistrar notas.
+
+instalando nuget --> dotnet add package Newtonsoft.Json --version 13.0.3
