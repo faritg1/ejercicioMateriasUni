@@ -9,6 +9,7 @@ internal class Program
         Estudiante student = new Estudiante();
         int op = 0;
         bool entrando = true;
+        arrayEstud = misFunciones.loadData();
         while (entrando){
             /* try{ */
                 do{
@@ -34,10 +35,11 @@ internal class Program
                         case 1:
                             Console.Clear();
                             student.registrarEstudiante(arrayEstud);
+                            misFunciones.saveData(arrayEstud);
                             break;
                         case 2:
                             Console.Clear();
-                            misFunciones.menoNota(arrayEstud);
+                            misFunciones.menuNota(arrayEstud);
                             break;
                         case 3:
                             misFunciones.mostrarEstudiante(arrayEstud);

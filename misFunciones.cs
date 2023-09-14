@@ -1,8 +1,23 @@
 using ejercicioMateriasUni.Entities;
+using Newtonsoft.Json;
 
 namespace ejercicioMateriasUni
 {
     public class misFunciones{
+        public static void saveData(List<Estudiante> arrayEstud){
+            string json = JsonConvert.SerializeObject(arrayEstud, Formatting.Indented);
+            File.WriteAllText("boletin.json", json);
+        }
+
+        public static List<Estudiante> loadData(){
+            using (StreamReader reader = new StreamReader("boletin.json"))
+            {
+                string json = reader.ReadToEnd();
+                return System.Text.Json.JsonSerializer
+                .Deserialize<List<Estudiante>>(json, new System.Text.Json.JsonSerializerOptions()
+                { PropertyNameCaseInsensitive = true }) ?? new List<Estudiante>();
+            }
+        }
         public static void mostrarEstudiante(List<Estudiante> arrayEstud){
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -12,9 +27,9 @@ namespace ejercicioMateriasUni
                     Console.WriteLine("| {0,-20} | {1,-20} | {2,-20} | {3,-20} | {4,-20} |", item.Codigo, item.Nombre, item.Email, item.Edad, item.Direccion);
                 }
                 Console.WriteLine("------------------------------------------------------------------------------------------------------------------------------------");
+                Console.ReadKey();
         }
-
-        public static void menoNota(List<Estudiante> arrayEstud){
+        public static void menuNota(List<Estudiante> arrayEstud){
             int op = 0;
             /* try{ */
                 do{

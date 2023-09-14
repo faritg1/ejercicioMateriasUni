@@ -1,0 +1,22 @@
+[
+  {
+    "Codigo": "3232",
+    "Nombre": "asdsd",
+    "Email": "sadsda",
+    "Edad": 12,
+    "Direccion": "sad",
+    "Quiz": [],
+    "Trabajo": [],
+    "Parcial": []
+  },
+  {
+    "Codigo": "123",
+    "Nombre": "asd",
+    "Email": "asd",
+    "Edad": 23,
+    "Direccion": "sda",
+    "Quiz": [],
+    "Trabajo": [],
+    "Parcial": []
+  }
+]

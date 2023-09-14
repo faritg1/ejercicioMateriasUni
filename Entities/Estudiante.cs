@@ -54,7 +54,6 @@ public class Estudiante : NotasEstudiante
             
             Console.WriteLine("Codigo del estudiante");
             estudiante.Codigo = Console.ReadLine().ToLower();
-            //nota.CodEstudiante = estudiante.Codigo;
 
             Console.WriteLine("Nombre del estudiante");
             estudiante.Nombre = Console.ReadLine();
@@ -76,6 +75,7 @@ public class Estudiante : NotasEstudiante
                 arrayEstud.Add(estudiante);
             }else{
                 Console.WriteLine("hay un error al registrar los datos del estudiante");
+                Console.ReadLine();
             }
         /* }catch (Exception ex){
             Console.WriteLine("ALGO HIZO MAL!!! {0}",ex.Message.ToString());
