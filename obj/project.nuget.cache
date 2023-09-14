@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "FmF6X6hVThqcagbKkQy7OLAJQUEpTXdawnlGd0/rasL8kXVytj8cMlfpUCaISW+hR6M0pNQo2az35ewBYJS5CA==",
+  "dgSpecHash": "99s+xPqAeY3QSM5Nm4GvZytCsZ8fuy9VapJdErUkPn8nmh3iBhZtuhqtoqJDF0fyHngs2ZYowIe8Obx5/JKJTA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\M02-037\\Documents\\aprenCSharp\\ejercicioMateriasUni\\ejercicioMateriasUni.csproj",
+  "projectFilePath": "/home/carlosfarit/Documentos/programacion/aprendiendoCsharp/ejercicioMateriasUni/ejercicioMateriasUni.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\M02-037\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "/home/carlosfarit/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

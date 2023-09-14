@@ -27,7 +27,9 @@ internal class Program
                         case 0:
                             entrando = false;
                             Console.Clear();
-                            Console.WriteLine("Gracias por usar este programa");
+                            Console.WriteLine("|--------------------------------------|");
+                            Console.WriteLine("|    Gracias por usar este programa    |");
+                            Console.WriteLine("|--------------------------------------|");
                             break;
                         case 1:
                             Console.Clear();

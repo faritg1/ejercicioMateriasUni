@@ -3,34 +3,6 @@ using ejercicioMateriasUni.Entities;
 namespace ejercicioMateriasUni
 {
     public class misFunciones{
-
-        public static void agregandoQuiz(NotasEstudiante notasQ){
-            if(notasQ.Quiz.Count < 4){
-                Console.WriteLine("Ingrese la nota del quiz {0}",notasQ.Quiz.Count+1);
-                notasQ.Quiz.Add(Convert.ToInt32(Console.ReadLine()));
-            }else{
-                Console.WriteLine("Los campos de los quices ya estan llenos");
-            }
-        }
-
-        public static void agregandoTrabajo(NotasEstudiante notasT){
-            if(notasT.Trabajo.Count < 2){
-                Console.WriteLine("Ingrese la nota del trabajo {0}",notasT.Trabajo.Count+1);
-                notasT.Trabajo.Add(Convert.ToInt32(Console.ReadLine()));
-            }else{
-                Console.WriteLine("Los campos de los trabajos ya estan llenos");
-            }
-        }
-
-        public static void agregandoParcial(NotasEstudiante notasP){
-            if(notasP.Parcial.Count < 3){
-                Console.WriteLine("Ingrese la nota del parcial {0}",notasP.Parcial.Count+1);
-                notasP.Parcial.Add(Convert.ToInt32(Console.ReadLine()));
-            }else{
-                Console.WriteLine("Los campos de los parciales ya estan llenos");
-            }
-        }
-
         public static void mostrarEstudiante(List<Estudiante> arrayEstud){
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -65,49 +37,67 @@ namespace ejercicioMateriasUni
                             Console.Clear();
                             Console.WriteLine("Ingrese el codigo del estudiante");
                             cod = Console.ReadLine();
-                            Estudiante alumno = arrayEstud.FirstOrDefault(x => x.Codigo.Equals(cod));
+                            Estudiante alumnoQ = arrayEstud.FirstOrDefault(x => x.Codigo.Equals(cod));
 
-                            if(alumno != null){
-                                Console.WriteLine("Por favor ingrese la nota del : ");
-                                Console.WriteLine("Quiz Nro : {0}",alumno.Quiz.Count+1);
-                                alumno.Quiz.Add(float.Parse(Console.ReadLine()));
-
-                                int idx = arrayEstud.FindIndex(y => y.Codigo.Equals(cod));
-                                arrayEstud[idx] = alumno;
+                            if(alumnoQ != null){
+                                if(alumnoQ.Quiz.Count < 4){
+                                    Console.WriteLine("Por favor ingrese la nota del");
+                                    Console.WriteLine("Quiz Nro : {0}",alumnoQ.Quiz.Count+1);
+                                    alumnoQ.Quiz.Add(float.Parse(Console.ReadLine()));
+                                    int idx = arrayEstud.FindIndex(y => y.Codigo.Equals(cod));
+                                    arrayEstud[idx] = alumnoQ;
+                                }else{
+                                    Console.WriteLine("Los campos de los quices ya estan llenos para el estudiante {0}",alumnoQ.Nombre);
+                                    Console.ReadKey();
+                                }
                             }else{
                                 Console.WriteLine("El codigo no fue encontrado");
                                 Console.ReadKey();
                             }
                             break;
                         case 2:
-                                Console.WriteLine("Ingrese el codigo del estudiante");
-                                cod = Console.ReadLine();
-                                /* foreach (NotasEstudiante item in arrayNot){
-                                    if (item.CodEstudiante == cod){
-                                        do
-                                        {
-                                            misFunciones.agregandoTrabajo(item);                                    
-                                            Console.WriteLine("¿Desea Agregar nota de otro Trabajo? si(Y) no(N)");
-                                        } while (Console.ReadLine().ToUpper() == "Y");
-                                    }else{
-                                        Console.WriteLine("Estudiante no encontrado");
-                                    }
-                                } */
+                            Console.Clear();
+                            Console.WriteLine("Ingrese el codigo del estudiante");
+                            cod = Console.ReadLine();
+                            Estudiante alumnoT = arrayEstud.FirstOrDefault(x => x.Codigo.Equals(cod));
+
+                            if(alumnoT != null){
+                                if(alumnoT.Trabajo.Count < 2){
+                                    Console.WriteLine("Por favor ingrese la nota del");
+                                    Console.WriteLine("Trabajo Nro : {0}",alumnoT.Trabajo.Count+1);
+                                    alumnoT.Trabajo.Add(float.Parse(Console.ReadLine()));
+                                    int idx = arrayEstud.FindIndex(y => y.Codigo.Equals(cod));
+                                    arrayEstud[idx] = alumnoT;
+                                }else{
+                                    Console.WriteLine("Los campos de los trabajos ya estan llenos para el estudiante {0}",alumnoT.Nombre);
+                                    Console.ReadKey();
+                                }
+                            }else{
+                                Console.WriteLine("El codigo no fue encontrado");
+                                Console.ReadKey();
+                            }
                             break;
                         case 3:
-                                Console.WriteLine("Ingrese el codigo del estudiante");
-                                cod = Console.ReadLine();
-                                /* foreach (NotasEstudiante item in arrayNot){
-                                    if (item.CodEstudiante == cod){
-                                        do
-                                        {
-                                            misFunciones.agregandoParcial(item);                                    
-                                            Console.WriteLine("¿Desea Agregar nota de otro Trabajo? si(Y) no(N)");
-                                        } while (Console.ReadLine().ToUpper() == "Y");
-                                    }else{
-                                        Console.WriteLine("Estudiante no encontrado");
-                                    }
-                                } */
+                            Console.Clear();
+                            Console.WriteLine("Ingrese el codigo del estudiante");
+                            cod = Console.ReadLine();
+                            Estudiante alumnoP = arrayEstud.FirstOrDefault(x => x.Codigo.Equals(cod));
+
+                            if(alumnoP != null){
+                                if(alumnoP.Parcial.Count < 2){
+                                    Console.WriteLine("Por favor ingrese la nota del");
+                                    Console.WriteLine("Parcial Nro : {0}",alumnoP.Parcial.Count+1);
+                                    alumnoP.Parcial.Add(float.Parse(Console.ReadLine()));
+                                    int idx = arrayEstud.FindIndex(y => y.Codigo.Equals(cod));
+                                    arrayEstud[idx] = alumnoP;
+                                }else{
+                                    Console.WriteLine("Los campos de los Parciales ya estan llenos para el estudiante {0}",alumnoP.Nombre);
+                                    Console.ReadKey();
+                                }
+                            }else{
+                                Console.WriteLine("El codigo no fue encontrado");
+                                Console.ReadKey();
+                            }
                             break;
                         default:
                             Console.WriteLine("EY!!! TE SALISTE DEL RANsadsadGO");
