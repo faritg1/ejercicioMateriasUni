@@ -55,6 +55,14 @@ public class Estudiante : NotasEstudiante
             Console.WriteLine("Codigo del estudiante");
             estudiante.Codigo = Console.ReadLine().ToLower();
 
+            if(arrayEstud.Any(cod => cod.Codigo == estudiante.Codigo)){
+                Console.WriteLine("Ya existe un estudiante con este codigo");
+                Console.ReadKey();
+            }else{
+                Console.WriteLine("se le asigno ese codigo");
+                Console.ReadKey();
+            }
+
             Console.WriteLine("Nombre del estudiante");
             estudiante.Nombre = Console.ReadLine();
 

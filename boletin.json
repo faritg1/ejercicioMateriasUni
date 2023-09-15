@@ -23,5 +23,35 @@
     ],
     "Trabajo": [],
     "Parcial": []
+  },
+  {
+    "Codigo": "rr",
+    "Nombre": "farit",
+    "Email": "asd",
+    "Edad": 12,
+    "Direccion": "das",
+    "Quiz": [],
+    "Trabajo": [],
+    "Parcial": []
+  },
+  {
+    "Codigo": "ee",
+    "Nombre": "carlos",
+    "Email": "sdasd",
+    "Edad": 12,
+    "Direccion": "sad",
+    "Quiz": [],
+    "Trabajo": [],
+    "Parcial": []
+  },
+  {
+    "Codigo": "t",
+    "Nombre": "carlos",
+    "Email": "sad",
+    "Edad": 12,
+    "Direccion": "sad",
+    "Quiz": [],
+    "Trabajo": [],
+    "Parcial": []
   }
 ]
