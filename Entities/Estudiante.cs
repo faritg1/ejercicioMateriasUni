@@ -51,17 +51,28 @@ public class Estudiante : NotasEstudiante
     public void registrarEstudiante(List<Estudiante> arrayEstud){
         /* try{ */
             Estudiante estudiante = new Estudiante();
-            
-            Console.WriteLine("Codigo del estudiante");
-            estudiante.Codigo = Console.ReadLine().ToLower();
+            string codigo;
+            bool encontrado = true;
 
-            if(arrayEstud.Any(cod => cod.Codigo == estudiante.Codigo)){
-                Console.WriteLine("Ya existe un estudiante con este codigo");
-                Console.ReadKey();
-            }else{
-                Console.WriteLine("se le asigno ese codigo");
-                Console.ReadKey();
-            }
+            do{
+                Console.WriteLine("Codigo del estudiante");
+                codigo = Console.ReadLine().ToLower();
+
+                if(codigo != string.Empty){
+                    if(arrayEstud.Any(cod => cod.Codigo == codigo)){
+                        Console.WriteLine("Ya existe un estudiante con este codigo");
+                        Console.ReadKey();
+                    }else{
+                        Console.WriteLine("se le asigno ese codigo");
+                        Console.ReadKey();
+                        estudiante.codigo = codigo;
+                        encontrado = false;
+                    }
+                }else{
+                    Console.WriteLine("Codigo Vacio");
+                    Console.ReadKey();
+                }
+            } while (encontrado);
 
             Console.WriteLine("Nombre del estudiante");
             estudiante.Nombre = Console.ReadLine();
