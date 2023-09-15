@@ -19,7 +19,7 @@ internal class Program
                     Console.WriteLine("|  1. Registrar Estudiante/s                                                     |");
                     Console.WriteLine("|  2. Registrar Notas                                                            |");
                     Console.WriteLine("|  3. Elimiar Estudiante                                                         |");
-                    Console.WriteLine("|  3. Mostrar Todos los Estudiantes                                              |");
+                    Console.WriteLine("|  4. Mostrar Todos los Estudiantes                                              |");
                     Console.WriteLine("|  0. Salir                                                                      |");
                     Console.WriteLine("|--------------------------------------------------------------------------------|");
                     Console.Write("--> ");
@@ -43,6 +43,10 @@ internal class Program
                             misFunciones.menuNota(arrayEstud);
                             break;
                         case 3:
+                            Console.Clear();
+                            student.elimiarEstudiante(arrayEstud);
+                            break;
+                        case 4:
                             misFunciones.mostrarEstudiante(arrayEstud);
                             break;
                         default:

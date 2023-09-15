@@ -81,4 +81,21 @@ public class Estudiante : NotasEstudiante
             Console.WriteLine("ALGO HIZO MAL!!! {0}",ex.Message.ToString());
         } */
     }
+
+    public void elimiarEstudiante(List<Estudiante> arrayEstud){
+        Console.WriteLine("Ingrese el codigo del estudiante que desea eliminar: ");
+        string cod = Console.ReadLine().ToLower();
+
+        Estudiante alumnoEli = arrayEstud.FirstOrDefault(x => x.Codigo.Equals(cod));
+
+        if(alumnoEli != null){
+            arrayEstud.Remove(alumnoEli);
+            misFunciones.saveData(arrayEstud);
+            Console.WriteLine("Estudiante eliminado con exito");
+            Thread.Sleep(1000);
+        }else{
+            Console.WriteLine("El codigo ingresado no existe");
+            Thread.Sleep(1000);
+        }
+    }
 }
