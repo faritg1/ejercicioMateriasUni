@@ -18,7 +18,8 @@ internal class Program
                 Console.WriteLine("|  1. Registrar Estudiante/s                                                     |");
                 Console.WriteLine("|  2. Registrar Notas                                                            |");
                 Console.WriteLine("|  3. Elimiar Estudiante                                                         |");
-                Console.WriteLine("|  4. Mostrar Todos los Estudiantes                                              |");
+                Console.WriteLine("|  4. Buscar Estudiante                                                          |");
+                Console.WriteLine("|  5. Mostrar Todos los Estudiantes                                              |");
                 Console.WriteLine("|  0. Salir                                                                      |");
                 Console.WriteLine("|--------------------------------------------------------------------------------|");
                 Console.Write("--> ");
@@ -46,6 +47,8 @@ internal class Program
                         student.elimiarEstudiante(arrayEstud);
                         break;
                     case 4:
+                        break;
+                    case 5:
                         misFunciones.mostrarEstudiante(arrayEstud);
                         break;
                     default:
@@ -58,5 +61,17 @@ internal class Program
                 Thread.Sleep(1000);
             }
         } while (entrando);
+    }
+    private static void ImprimirValores(IEnumerable<Estudiante> est){
+        int registros = 0;
+        Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Magenta;
+        Console.WriteLine("{0,-70} {1,7} {2,20}"," Titulo", "N. Paginas", "Fecha publicacion");
+        foreach (Estudiante item in est)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            registros += 1;
+            Console.WriteLine("{0,-70} {1,7} {2,20}",item.Nombre);
+        }
     }
 }

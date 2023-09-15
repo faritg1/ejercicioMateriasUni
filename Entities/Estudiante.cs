@@ -90,7 +90,7 @@ public class Estudiante : NotasEstudiante
             estudiante.Trabajo = new List<float>();
             estudiante.Parcial = new List<float>();
 
-            if((estudiante.Codigo.Length >= 0 && estudiante.Codigo.Length <=15) && (estudiante.Nombre.Length >=0 && estudiante.Nombre.Length <= 40) && (estudiante.Email.Length >=0 && estudiante.Email.Length <=40) && (estudiante.Direccion.Length>=0 && estudiante.Direccion.Length <= 40)){
+            if((estudiante.Codigo.Length > 0 && estudiante.Codigo.Length <=15) && (estudiante.Nombre.Length >0 && estudiante.Nombre.Length <= 40) && (estudiante.Email.Length >0 && estudiante.Email.Length <=40) && (estudiante.Direccion.Length>0 && estudiante.Direccion.Length <= 40)){
                 arrayEstud.Add(estudiante);
             }else{
                 Console.WriteLine("hay un error al registrar los datos del estudiante");
@@ -106,7 +106,6 @@ public class Estudiante : NotasEstudiante
         string cod = Console.ReadLine().ToLower();
 
         Estudiante alumnoEli = arrayEstud.FirstOrDefault(x => x.Codigo.Equals(cod));
-
         if(alumnoEli != null){
             arrayEstud.Remove(alumnoEli);
             misFunciones.saveData(arrayEstud);
@@ -115,6 +114,18 @@ public class Estudiante : NotasEstudiante
         }else{
             Console.WriteLine("El codigo ingresado no existe");
             Thread.Sleep(1000);
+        }
+    }
+
+    public void buscarCodigoEstudiante(List<Estudiante> arrayEstud, Estudiante estudiante){
+        Console.WriteLine("Ingrese el codigo del estudiante que desea Buscar: ");
+        string cod = Console.ReadLine().ToLower();
+
+        Estudiante alumnoCod = arrayEstud.FirstOrDefault(x => x.Codigo.Equals(cod));
+
+        foreach (Estudiante item in arrayEstud)
+        {
+            
         }
     }
 }
