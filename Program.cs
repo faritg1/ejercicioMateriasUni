@@ -18,6 +18,7 @@ internal class Program
                     Console.WriteLine("|-----------------------------Programa Universitario-----------------------------|");
                     Console.WriteLine("|  1. Registrar Estudiante/s                                                     |");
                     Console.WriteLine("|  2. Registrar Notas                                                            |");
+                    Console.WriteLine("|  3. Elimiar Estudiante                                                         |");
                     Console.WriteLine("|  3. Mostrar Todos los Estudiantes                                              |");
                     Console.WriteLine("|  0. Salir                                                                      |");
                     Console.WriteLine("|--------------------------------------------------------------------------------|");

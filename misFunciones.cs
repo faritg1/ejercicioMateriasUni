@@ -118,6 +118,7 @@ namespace ejercicioMateriasUni
                             Console.WriteLine("EY!!! TE SALISTE DEL RANsadsadGO");
                             break;
                     }
+                    saveData(arrayEstud);
                 }while(op != 0);
 
             /* }catch (Exception ex){

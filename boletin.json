@@ -5,8 +5,13 @@
     "Email": "sadsda",
     "Edad": 12,
     "Direccion": "sad",
-    "Quiz": [],
-    "Trabajo": [],
+    "Quiz": [
+      31.0,
+      3.3
+    ],
+    "Trabajo": [
+      35.0
+    ],
     "Parcial": []
   },
   {
@@ -16,6 +21,31 @@
     "Edad": 23,
     "Direccion": "sda",
     "Quiz": [],
+    "Trabajo": [],
+    "Parcial": []
+  },
+  {
+    "Codigo": "123",
+    "Nombre": "carlos",
+    "Email": "sadsad",
+    "Edad": 12231,
+    "Direccion": "asdsad",
+    "Quiz": [],
+    "Trabajo": [],
+    "Parcial": []
+  },
+  {
+    "Codigo": "f1",
+    "Nombre": "carlossda",
+    "Email": "asd",
+    "Edad": 231,
+    "Direccion": "sad",
+    "Quiz": [
+      35.0,
+      3213.0,
+      34.0,
+      36.0
+    ],
     "Trabajo": [],
     "Parcial": []
   }

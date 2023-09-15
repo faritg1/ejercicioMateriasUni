@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/carlosfarit/Documentos/programacion/aprendiendoCsharp/ejercicioMateriasUni/ejercicioMateriasUni.csproj": {}
+    "/workspaces/ejercicioMateriasUni/ejercicioMateriasUni.csproj": {}
   },
   "projects": {
-    "/home/carlosfarit/Documentos/programacion/aprendiendoCsharp/ejercicioMateriasUni/ejercicioMateriasUni.csproj": {
+    "/workspaces/ejercicioMateriasUni/ejercicioMateriasUni.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/carlosfarit/Documentos/programacion/aprendiendoCsharp/ejercicioMateriasUni/ejercicioMateriasUni.csproj",
+        "projectUniqueName": "/workspaces/ejercicioMateriasUni/ejercicioMateriasUni.csproj",
         "projectName": "ejercicioMateriasUni",
-        "projectPath": "/home/carlosfarit/Documentos/programacion/aprendiendoCsharp/ejercicioMateriasUni/ejercicioMateriasUni.csproj",
-        "packagesPath": "/home/carlosfarit/.nuget/packages/",
-        "outputPath": "/home/carlosfarit/Documentos/programacion/aprendiendoCsharp/ejercicioMateriasUni/obj/",
+        "projectPath": "/workspaces/ejercicioMateriasUni/ejercicioMateriasUni.csproj",
+        "packagesPath": "/home/codespace/.nuget/packages/",
+        "outputPath": "/workspaces/ejercicioMateriasUni/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/carlosfarit/.nuget/NuGet/NuGet.Config"
+          "/home/codespace/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/opt/dotnet/7.0.400/sdk/7.0.400/RuntimeIdentifierGraph.json"
         }
       }
     }
